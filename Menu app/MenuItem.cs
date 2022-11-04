@@ -21,5 +21,9 @@ namespace Menu_app
         {
             
         }
+        public void Start()
+        {
+
+        }
     }
 }

@@ -12,7 +12,16 @@ namespace Menu_app
         {
             Title = title;
         }
+        public Menu(string title, params MenuItem[] menuitems)
+        {
+            Title = title;
+            foreach (MenuItem item in menuitems)
+            {
+                Add(item);
+            }
+        }
         public string Title { get; set; }
+
         private bool _running { get; set; }
         private int CurrentSelected { get; set; } 
 
@@ -25,7 +34,7 @@ namespace Menu_app
 
         public void Select()
         {
-            this.Start();
+            MenuItemList[CurrentSelected].Start();
         }
 
         public void Start()
@@ -77,7 +86,11 @@ namespace Menu_app
                 case ConsoleKey.UpArrow:
                     MoveUp();
                     break;
-
+                case ConsoleKey.Enter:
+                    Console.WriteLine("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEY");
+                    _running = false;
+                    Select();
+                    break;
                 default:
                     break;
             }
