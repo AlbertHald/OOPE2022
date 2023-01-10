@@ -11,14 +11,14 @@ class Person {
     }
 
 
-    private string _FirstName;
+    private string _firstName;
     public string FirstName {
-        get => _FirstName;
+        get => _firstName;
         set
         {
             if ((value.Length > 1) && (value.Length < 40))
             {
-                _FirstName = value;
+                _firstName = value;
             }
             else
             {
@@ -27,15 +27,15 @@ class Person {
         }
     }
 
-    private string _LastName;
+    private string _lastName;
     public string LastName
     {
-        get => _LastName;
+        get => _lastName;
         set
         {
             if ((value.Length > 0) && (value.Length < 40))
             {
-                _LastName = value;
+                _lastName = value;
             }
             else
             {

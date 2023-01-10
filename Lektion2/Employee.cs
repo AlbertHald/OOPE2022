@@ -13,14 +13,23 @@ namespace Lektion2
             JobTitle = jobTitle;
             Salary = salary;
         }
-
+        
+        //Name of employee
         private string _Name;
         public string Name { set; get; }
-
-        private string _JobTitle;
+        
+        //Jobtitle
+        private string _jobTitle;
         public string JobTitle { set; get; } 
-
-        private int _Salary;  
+        
+        //Salary
+        private int _salary;  
         public int Salary { set; get; }
+
+        //Calculates the yearly salary of an employee
+        private protected int CalculateYearlySalary(int salary)
+        {
+            return salary * 12;
+        }
     }
 }
